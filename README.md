@@ -12,15 +12,15 @@ Program wykorzystuje w tym celu programowanie dynamiczne, czyli zmodyfikowaną w
 
 W celu utworzenia repozytorium lokalnie, w folderze projektu, używamy komendy `git init`.<br>
 
-![](local_rep.png =100x20)
+![](local_rep.png)
 
 Następnie logujemy się przy pomocy `gh auth login`.<br>
 
-![](auth.png =100x20)
+![](auth.png)
 
 Ostatecznie dodajemy lokalne repozytorium na GitHub przy pomocy komendy `gh repo create`.<br>
 
-![](repocreate.png =100x20)
+![](repocreate.png)
 
 W efekcie otrzymujemy powyższe repozytorium.<br>
 
@@ -30,7 +30,7 @@ Tworzymy Dockerfile jak powyżej.<br><br>
 Następnie poleceniem `docker build -t fibonacci-sequence .` tworzymy obraz o nazwie fibonacci-sequence.<br>
 Aby uruchomić obraz używamy komendy `docker run -i -a stdout -a stdin fibonacci-sequence`. 
 
-![](test.png =100x20)
+![](test.png)
 
 Jak widzimy powyższy kod działa poprawnie.
 
@@ -38,19 +38,19 @@ Jak widzimy powyższy kod działa poprawnie.
 
 Plik fib.yml zapewnia poprawne dziłanie akcji GitHub. Po wykonaniu push z tagiem uruchamia się pipline który powoduje zbudowanie obrazu i dodanie go z odpowiednią wersją na docker hub. <br>
 
-![](addvarsion.png =100x20)
+![](addvarsion.png)
 
 Po dodaniu wersji. <br>
 
-![](actions.png =100x20)
+![](actions.png)
 
-![](packages.png =100x20)
+![](packages.png)
 
 # Docker hub
 
 Po wykonaniu pipeline odpowiednia wersja trafia na docker hub. <br>
 
-![](dockerhub.png =100x20)
+![](dockerhub.png)
 
 # Sprawdzenie obrazu
 
