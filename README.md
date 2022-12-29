@@ -37,7 +37,7 @@ Przeprowadzone testy pokazują, że aplikacja działa zgodnie z założeniami.
 
 # Plik fib.yml [Ad. p3]
 
-Plik fib.yml zapewnia poprawne dziłanie akcji GitHub. Po wykonaniu push z tagiem wersji uruchamia się pipline który powoduje zbudowanie obrazu i dodanie go z odpowiednią wersją (zgodną z semver) na docker hub i ghcr.io. <br><br>
+Plik fib.yml zapewnia poprawne dziłanie akcji GitHub. Po wykonaniu push z tagiem wersji uruchamia się workflow który powoduje zbudowanie obrazu i dodanie go z odpowiednią wersją (zgodną z semver) na docker hub i ghcr.io. <br><br>
 
 Dodanie wersji.<br>
 
@@ -45,7 +45,7 @@ Dodanie wersji.<br>
 
 # Cache [Ad. p4]
 
-Jak mozemy zauważyć kolejny build wykonał się o około 30% szybciej dzięki użyciu cache'a. <br>
+Dzięki użyciu cache'a, kolejny build wykonał się o około 30% szybciej.<br>
 
 ![](actions.png)
 
@@ -67,7 +67,7 @@ W celu uruchomienia obrazu używamy komendy `docker run -i -a stdout -a stdin wo
 
 ![](finaltest.png)
 
-Jak widizmy po przeprowadzeniu podobnego testu jak poprzednio otrzymaliśmy wyniki potwierdzające poprawne działanie kontenera z palikacją.<br>
+Jak widizmy po przeprowadzeniu podobnego testu jak poprzednio otrzymaliśmy wyniki potwierdzające poprawne działanie kontenera z aplikacją.<br>
 
 
 
