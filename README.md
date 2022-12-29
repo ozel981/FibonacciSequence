@@ -67,7 +67,7 @@ W celu uruchomienia obrazu używamy komendy `docker run -i -a stdout -a stdin wo
 
 ![H](finaltest.png)
 
-Jak widizmy po przeprowadzeniu podobnego testu jak poprzednio otrzymaliśmy wyniki potwierdzające poprawne działanie kontenera z aplikacją.<br>
+Jak widzimy na powyższym obrazku po przeprowadzeniu podobnego testu jak poprzednio otrzymaliśmy wyniki potwierdzające poprawne działanie kontenera z aplikacją.<br>
 
 
 
