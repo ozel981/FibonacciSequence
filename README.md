@@ -22,27 +22,36 @@ Ostatecznie dodajemy lokalne repozytorium na GitHub przy pomocy komendy `gh repo
 
 ![](repocreate.png)
 
-W efekcie otrzymujemy powyższe repozytorium.<br>
+W efekcie na GitHub pojawiło sie obecje repozytorium.<br>
 
 # Stworzenie i uruchomienie obrazu dockera z apliakcją [Ad. p2]
 
-Tworzymy Dockerfile jak powyżej.<br><br>
-Następnie poleceniem `docker build -t fibonacci-sequence .` tworzymy obraz o nazwie fibonacci-sequence.<br>
+Do zbudowania obrazu należy wykorzystać dockerfile znajdujący się na tym repozytorium.<br><br>
+Zbudować obraz należy poleceniem `docker build -t fibonacci-sequence .`, które tworzy obraz o nazwie fibonacci-sequence.<br>
 Aby uruchomić obraz używamy komendy `docker run -i -a stdout -a stdin fibonacci-sequence`. 
+Efektem jest uruchomienie kontenera z aplikacją która oczekuje na podanie numeru ciągu Fibonacciego.
 
 ![](test.png)
 
-Jak widzimy powyższy kod działa poprawnie.
+Przeprowadzone testy pokazują, że aplikacja działa zgodnie z założeniami.
 
 # Plik fib.yml [Ad. p3]
 
-Plik fib.yml zapewnia poprawne dziłanie akcji GitHub. Po wykonaniu push z tagiem uruchamia się pipline który powoduje zbudowanie obrazu i dodanie go z odpowiednią wersją na docker hub. <br>
+Plik fib.yml zapewnia poprawne dziłanie akcji GitHub. Po wykonaniu push z tagiem wersji uruchamia się pipline który powoduje zbudowanie obrazu i dodanie go z odpowiednią wersją (zgodną z semver) na docker hub i ghcr.io. <br><br>
 
-![](addvarsion.png)
+Dodanie wersji.<br>
 
-Po dodaniu wersji. <br>
+![](addversion.png)
+
+# Cache [Ad. p4]
+
+Jak mozemy zauważyć kolejny build wykonał się o około 30% szybciej dzięki użyciu cache'a. <br>
 
 ![](actions.png)
+
+# ghcr.io [Ad. p4]
+
+Z ghcr obraz możemy pobrac przy pomocy komendy `docker pull ghcr.io/ozel981/fibonaccisequence:1.0.1`.
 
 ![](packages.png)
 
@@ -54,7 +63,11 @@ Po wykonaniu pipeline odpowiednia wersja trafia na docker hub. <br>
 
 # Sprawdzenie obrazu [Ad. p4]
 
-W celu uruchomienia obrazu używamy komendy `docker run -i -a stdout -a stdin wojtekpodmokly/fibonaccisequence:1.0.0`, która (pobieże nam obraz jeśli nie istnieje) uruchomi nam kontener.
+W celu uruchomienia obrazu używamy komendy `docker run -i -a stdout -a stdin wojtekpodmokly/fibonaccisequence:1.0.0`, która pobieże nam obraz jeśli nie istnieje lokalnie i uruchomi nam kontener. <br>
+
+![](finaltest.png)
+
+Jak widizmy po przeprowadzeniu podobnego testu jak poprzednio otrzymaliśmy wyniki potwierdzające poprawne działanie kontenera z palikacją.<br>
 
 
 
