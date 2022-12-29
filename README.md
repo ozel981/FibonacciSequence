@@ -12,15 +12,15 @@ Program wykorzystuje w tym celu programowanie dynamiczne, czyli zmodyfikowaną w
 
 W celu utworzenia repozytorium lokalnie, w folderze projektu, używamy komendy `git init`.<br>
 
-![](local_rep.png)
+![H](local_rep.png)
 
 Następnie logujemy się przy pomocy `gh auth login`.<br>
 
-![](auth.png)
+![H](auth.png)
 
 Ostatecznie dodajemy lokalne repozytorium na GitHub przy pomocy komendy `gh repo create`.<br>
 
-![](repocreate.png)
+![H](repocreate.png)
 
 W efekcie na GitHub pojawiło sie obecje repozytorium.<br>
 
@@ -31,7 +31,7 @@ Zbudować obraz należy poleceniem `docker build -t fibonacci-sequence .`, któr
 Aby uruchomić obraz używamy komendy `docker run -i -a stdout -a stdin fibonacci-sequence`. 
 Efektem jest uruchomienie kontenera z aplikacją która oczekuje na podanie numeru ciągu Fibonacciego.
 
-![](test.png)
+![H](test.png)
 
 Przeprowadzone testy pokazują, że aplikacja działa zgodnie z założeniami.
 
@@ -41,31 +41,31 @@ Plik fib.yml zapewnia poprawne dziłanie akcji GitHub. Po wykonaniu push z tagie
 
 Dodanie wersji.<br>
 
-![](addversion.png)
+![H](addversion.png)
 
 # Cache [Ad. p4]
 
 Dzięki użyciu cache'a, kolejny build wykonał się o około 30% szybciej.<br>
 
-![](actions.png)
+![H](actions.png)
 
 # ghcr.io [Ad. p4]
 
 Z ghcr obraz możemy pobrac przy pomocy komendy `docker pull ghcr.io/ozel981/fibonaccisequence:1.0.1`.
 
-![](packages.png)
+![H](packages.png)
 
 # Docker hub [Ad. p4]
 
 Po wykonaniu pipeline odpowiednia wersja trafia na docker hub. <br>
 
-![](dockerhub.png)
+![H](dockerhub.png)
 
 # Sprawdzenie obrazu [Ad. p4]
 
 W celu uruchomienia obrazu używamy komendy `docker run -i -a stdout -a stdin wojtekpodmokly/fibonaccisequence:1.0.0`, która pobieże nam obraz jeśli nie istnieje lokalnie i uruchomi nam kontener. <br>
 
-![](finaltest.png)
+![H](finaltest.png)
 
 Jak widizmy po przeprowadzeniu podobnego testu jak poprzednio otrzymaliśmy wyniki potwierdzające poprawne działanie kontenera z aplikacją.<br>
 
