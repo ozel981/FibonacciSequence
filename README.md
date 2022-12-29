@@ -63,7 +63,7 @@ Po wykonaniu pipeline odpowiednia wersja trafia na docker hub. <br>
 
 # Sprawdzenie obrazu [Ad. p4]
 
-W celu uruchomienia obrazu używamy komendy `docker run -i -a stdout -a stdin wojtekpodmokly/fibonaccisequence:1.0.0`, która pobieże nam obraz jeśli nie istnieje lokalnie i uruchomi nam kontener. <br>
+W celu uruchomienia obrazu używamy komendy `docker run -i -a stdout -a stdin wojtekpodmokly/fibonaccisequence:1.0.1`, która pobieże nam obraz jeśli nie istnieje lokalnie i uruchomi nam kontener. <br>
 
 ![H](finaltest.png)
 
